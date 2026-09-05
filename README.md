@@ -52,7 +52,7 @@ The coach provides an assignment link; it does not automatically submit work or 
 
 ## Download and run locally
 
-The application source is currently packaged in [CARE-Practice-Coach-GitHub.zip](CARE-Practice-Coach-GitHub.zip). Download and extract that archive first. Run the following commands from the extracted folder containing `package.json`.
+Clone or download this repository, then run the following commands from the project folder containing `package.json`. The original [ZIP archive](CARE-Practice-Coach-GitHub.zip) is retained as a source snapshot.
 
 **Requirements:** Node.js 20.9 or newer, npm, and an OpenAI API key for feedback.
 
@@ -81,7 +81,7 @@ npm run start
 
 ## Project structure and customization
 
-Paths below refer to files inside the extracted archive.
+The application source files are available directly in this repository.
 
 | File | Purpose |
 | --- | --- |
@@ -98,7 +98,7 @@ For another course, update the cases and Canvas assignment URLs in `lib/cases.ts
 
 ## Hosting
 
-Before importing this repository into a hosting service, extract and commit the application files so `package.json` and the source folders are available to the build system. The ZIP archive alone is not a runnable deployment. Configure `OPENAI_API_KEY` as a server-side environment variable in the hosting environment.
+Import this repository into Vercel using the **Next.js** preset and the root directory `./`. Configure `OPENAI_API_KEY` as a server-side environment variable in the hosting environment before deploying. The app requires a server for AI feedback; a static-only host is insufficient.
 
 ## Troubleshooting
 
